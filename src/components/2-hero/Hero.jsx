@@ -6,16 +6,21 @@ const Hero = () => {
       <div className="left-section">
         <div className="parent-avatar flex">
           <img className="avatar" src="./me.png" alt="" />
+        </div>
+        <div className="flex">
+          <h1 className="title">Ibrahim Fathi</h1>
           <div className="icon-verified"></div>
         </div>
-        <h1 className="title">Cross-Platform Mobile Application Developer.</h1>
+        <h2 className="title-description">
+          Cross-Platform Mobile Application Developer.
+        </h2>
         <p className="sub-title">
-          I am Ibrahim Fathi, a driven Jr. Mobile App Developer with a proven
-          record of creating highly-received and commercially successful
-          applications. My expertise lies in building user-friendly apps and
-          collaborating effectively within teams. I am constantly seeking
-          opportunities to enhance and refine existing apps, ensuring they
-          captivate users and stand the test of time.
+          I am a Highly-Motivated Jr. Mobile App Developer with a proven record
+          of creating highly-received and commercially successful applications.
+          My expertise lies in building user-friendly apps and collaborating
+          effectively within teams. I am constantly seeking opportunities to
+          enhance and refine existing apps, ensuring they captivate users and
+          stand the test of time.
         </p>
         <div className="all-icons flex">
           <div className="icon icon-twitter"></div>
