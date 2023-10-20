@@ -8,7 +8,7 @@ const Hero = () => {
           <img className="avatar" src="./me.png" alt="" />
         </div>
         <div className="flex">
-          <h1 className="title">Ibrahim Fathi</h1>
+          <h1 className="title">Ibrahim M.Fathi</h1>
           <div className="icon-verified"></div>
         </div>
         <h2 className="title-description">
