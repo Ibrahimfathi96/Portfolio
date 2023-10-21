@@ -76,11 +76,23 @@ section.hero .all-icons .icon:hover {
 ===================================
 */
 
+.animation {
+  width: 200%;
+  margin-top: 7rem;
+  margin-right: -3rem;
+  transition: 100px 60px;
+}
+
 /* 
 =======================================
     3- Responsive Design (Media Query)
 =======================================
 */
+@media (max-width: 900px) {
+  .animation {
+    display: none;
+  }
+}
 @media (max-width: 600px) {
   section.hero .all-icons {
     flex-direction: row;

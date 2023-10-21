@@ -48,6 +48,10 @@ main section.left-section.flex button:hover {
   opacity: 1;
 }
 
+.light main section.left-section.flex button.active {
+  border: 1px solid #000;
+}
+
 /* 
 ===============================
     2. Right Section ==> Cards
@@ -55,6 +59,7 @@ main section.left-section.flex button:hover {
 */
 
 .card {
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.16), 1px 1px 1px rgba(0, 0, 0, 0.16);
   border: 1px solid rgba(93, 188, 252, 0.3);
   border-radius: 6px;
   transition: 0.3s;
@@ -70,6 +75,15 @@ main section.left-section.flex button:hover {
   border-color: var(--blue);
   rotate: 1deg;
   scale: 1.01;
+}
+
+.light .card {
+  border: none;
+}
+
+.light .card:hover {
+  border: none;
+  background-color: rgb(246, 246, 246);
 }
 
 main section.right-section.flex {

@@ -29,7 +29,7 @@ function App() {
 
       <a
         style={{
-          transition: "0.3s",
+          transition: "1s",
           opacity: showScroll ? 1 : 0,
         }}
         href="#up"

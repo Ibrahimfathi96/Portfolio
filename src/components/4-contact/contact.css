@@ -1,3 +1,6 @@
+section.contact-us form div.flex form {
+  flex-grow: 1;
+}
 section.contact-us .icon-envelope {
   color: var(--subtitle);
   margin-right: 1rem;
@@ -37,6 +40,10 @@ section.contact-us #message {
   resize: vertical;
 }
 
+section.contact-us .submit-container {
+  justify-content: flex-end;
+}
+
 section.contact-us .submit {
   background-color: rgba(36, 37, 46, 1);
   border: 1px solid rgb(63, 63, 70);
@@ -47,6 +54,7 @@ section.contact-us .submit {
   border-radius: 6px;
   transition: 0.3s;
   margin-top: 1.8rem;
+  align-self: flex-end;
 }
 
 section.contact-us .submit:hover {
@@ -54,13 +62,25 @@ section.contact-us .submit:hover {
 }
 
 section.contact-us #email:focus,
-section.contact-us #message:focus {
-  border: 1px solid var(--blue2);
-}
-
+section.contact-us #message:focus,
 section.contact-us #email:hover,
 section.contact-us #message:hover {
   border: 1px solid var(--blue2);
+}
+
+.light section.contact-us #email:focus,
+.light section.contact-us #message:focus,
+.light section.contact-us #email:hover,
+.light section.contact-us #message:hover {
+  border: 1px solid rgb(78, 80, 80);
+}
+
+.light section.contact-us #email,
+.light section.contact-us #message {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(128, 128, 128, 0.451);
+  box-shadow: 1px 1px 1px rgba(73, 73, 75, 0.1);
+  color: #232324;
 }
 
 /* 
@@ -68,6 +88,11 @@ section.contact-us #message:hover {
     3- Responsive Design (Media Query)
 =======================================
 */
+@media (max-width: 1250px) {
+  section.contact-us .contact-animation {
+    display: none;
+  }
+}
 @media (max-width: 600px) {
   section.contact-us .animation {
     display: none;
