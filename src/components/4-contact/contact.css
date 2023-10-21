@@ -1,6 +1,11 @@
 section.contact-us form div.flex form {
   flex-grow: 1;
 }
+.contact-animation {
+  align-self: flex-end;
+  height: 500px;
+  margin-left: 50%;
+}
 section.contact-us .icon-envelope {
   color: var(--subtitle);
   margin-right: 1rem;
@@ -88,6 +93,12 @@ section.contact-us #message:hover {
     3- Responsive Design (Media Query)
 =======================================
 */
+@media (max-width: 1800px) {
+  section.contact-us .contact-animation {
+    margin-left: 20%;
+    height: 360px;
+  }
+}
 @media (max-width: 1250px) {
   section.contact-us .contact-animation {
     display: none;

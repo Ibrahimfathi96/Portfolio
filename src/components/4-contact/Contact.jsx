@@ -73,7 +73,6 @@ const Contact = () => {
           <div className="animation">
             <Lottie
               className="contact-animation"
-              style={{ height: 360, marginLeft: "12rem", marginTop: "-5rem" }}
               loop={false}
               animationData={contactUs}
             />
