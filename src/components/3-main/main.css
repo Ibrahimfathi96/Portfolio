@@ -5,10 +5,11 @@
  
 1. 1. Left Section ==> Buttons
 2- Right Section ==> Cards
+3- Responsive Design (Media Query)
 */
 
 main.flex {
-  gap: 3rem;
+  gap: 2rem;
   align-items: start;
 }
 /* 
@@ -70,8 +71,13 @@ main section.left-section.flex button:hover {
   scale: 1.01;
 }
 
-main section.right-section {
+main section.right-section.flex {
   /* flex-grow: 1; */
+  flex-wrap: wrap;
+  /* gap: 18px; */
+  column-gap: 16px;
+  row-gap: 2rem;
+  justify-content: center;
 }
 .card img {
   border-radius: 6px;
@@ -114,4 +120,28 @@ main section.right-section {
   cursor: pointer;
   font-size: 1.3rem;
   color: var(--icon-hover);
+}
+
+/* 
+=======================================
+    3- Responsive Design (Media Query)
+=======================================
+*/
+@media (max-width: 600px) {
+  main.flex {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  main section.left-section.flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  main section.left-section.flex button {
+    width: 9rem;
+    padding: 0.8rem 0;
+    font-size: 0.87rem;
+  }
 }
