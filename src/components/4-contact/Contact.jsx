@@ -18,7 +18,7 @@ const Contact = () => {
         </p>
 
         <div
-          style={{ justifyContent: "space-between", marginTop: "-3rem" }}
+          style={{ justifyContent: "space-between", marginTop: "-2rem" }}
           className="flex"
         >
           <form onSubmit={handleSubmit}>
