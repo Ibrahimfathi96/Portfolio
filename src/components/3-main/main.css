@@ -112,13 +112,13 @@ main section.right-section.flex {
 }
 
 .card .icon-github,
-.card .icon-link {
+.card .icon-google-drive {
   font-size: 1.2rem;
   color: var(--subtitle);
 }
 
 .card .icon-github:hover,
-.card .icon-link:hover {
+.card .icon-google-drive:hover {
   cursor: pointer;
   font-size: 1.3rem;
   color: var(--icon-hover);

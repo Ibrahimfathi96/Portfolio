@@ -73,7 +73,7 @@ const Main = () => {
                 <p className="sub-title">{item.projectDescription}</p>
                 <div className="flex all-icons">
                   <div style={{ gap: "11px" }} className="flex">
-                    <div className="icon icon-link"></div>
+                    <div className="icon icon-google-drive"></div>
                     <div className="icon icon-github"></div>
                   </div>
                   <a className="link flex" href="">
