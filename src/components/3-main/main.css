@@ -58,6 +58,7 @@ main section.left-section.flex button:hover {
   border: 1px solid rgba(93, 188, 252, 0.3);
   border-radius: 6px;
   transition: 0.3s;
+
   background-image: linear-gradient(
     rgba(255, 255, 255, 0.05),
     rgba(255, 255, 255, 0.01)
@@ -72,7 +73,7 @@ main section.left-section.flex button:hover {
 }
 
 main section.right-section.flex {
-  /* flex-grow: 1; */
+  flex-grow: 1;
   flex-wrap: wrap;
   /* gap: 18px; */
   column-gap: 16px;
@@ -89,6 +90,7 @@ main section.right-section.flex {
 
 .card .box .title {
   color: var(--title);
+  text-transform: capitalize;
 }
 
 .card .box .sub-title {

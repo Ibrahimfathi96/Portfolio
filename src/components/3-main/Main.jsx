@@ -1,30 +1,76 @@
+import React from "react";
 import "./main.css";
+import { MyProjects } from "../../data/MyProjects";
 const Main = () => {
+  const [currentActive, setCurrentActive] = React.useState("all");
+  const [projects, setProjects] = React.useState(MyProjects);
+  const onClickHandler = (category) => {
+    setCurrentActive(category);
+    if (category === "all") {
+      setProjects(MyProjects);
+    } else {
+      const newArr = MyProjects.filter((item) => {
+        return item.category.includes(category);
+      });
+      setProjects(newArr);
+    }
+  };
   return (
     <main className="flex">
       <section className="left-section flex">
-        <button className="active">all projects</button>
-        <button>flutter</button>
-        <button>react native</button>
-        <button>react js</button>
-        <button>node & express</button>
-        <button>HTML & CSS</button>
+        <button
+          onClick={() => onClickHandler("all")}
+          className={currentActive === "all" ? "active" : null}
+        >
+          all projects
+        </button>
+        <button
+          onClick={() => onClickHandler("Flutter")}
+          className={currentActive === "Flutter" ? "active" : null}
+        >
+          flutter
+        </button>
+        <button
+          onClick={() => onClickHandler("React Native")}
+          className={currentActive === "React Native" ? "active" : null}
+        >
+          react native
+        </button>
+        <button
+          onClick={() => onClickHandler("React Js")}
+          className={currentActive === "React Js" ? "active" : null}
+        >
+          react js
+        </button>
+        <button
+          onClick={() => onClickHandler("Node Js")}
+          className={currentActive === "Node Js" ? "active" : null}
+        >
+          node & express
+        </button>
+        <button
+          onClick={() => onClickHandler("JavaScript")}
+          className={currentActive === "JavaScript" ? "active" : null}
+        >
+          javaScript
+        </button>
+        <button
+          onClick={() => onClickHandler("HTML & CSS")}
+          className={currentActive === "HTML & CSS" ? "active" : null}
+        >
+          HTML & CSS
+        </button>
       </section>
+
       <section className="right-section flex">
-        {["aa", "bb", "cc", 1, 7].map((item) => {
+        {projects.map((item) => {
           return (
-            <article key={item} className="card">
-              <img width={266} src="./1.jpg" alt="" />
+            <article key={item.id.toString()} className="card">
+              <img width={266} src={item.imagePath} alt="" />
 
               <div style={{ width: "266px" }} className="box">
-                <h1 className="title">Project Title</h1>
-                <p className="sub-title">
-                  lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloremque necessitatibus quidem, voluptatem quibusdam,
-                  adipisci eum doloribus quia, voluptate quas quod? Lorem ipsum
-                  dolor sit amet consectetur adipisicing elit. Doloremque
-                  necessitatibus.
-                </p>
+                <h1 className="title">{item.projectTitle}</h1>
+                <p className="sub-title">{item.projectDescription}</p>
                 <div className="flex all-icons">
                   <div style={{ gap: "11px" }} className="flex">
                     <div className="icon icon-link"></div>
