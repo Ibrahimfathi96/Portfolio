@@ -1,0 +1,51 @@
+/*
+====================
+ table of contents
+====================
+ 
+1- Footer Design
+2- Responsive Design (Media Query)
+*/
+
+footer.flex {
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+footer.flex ul {
+  gap: 1rem;
+}
+footer.flex ul a {
+  color: var(--subtitle);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+footer.flex ul a:hover {
+  color: var(--blue2);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+footer.flex p {
+  color: rgb(113, 113, 132);
+}
+
+/* 
+=======================================
+    2- Responsive Design (Media Query)
+=======================================
+*/
+@media (max-width: 850px) {
+  footer.flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  footer.flex ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
