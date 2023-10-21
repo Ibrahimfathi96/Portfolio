@@ -1,7 +1,9 @@
+// @ts-nocheck
 import Lottie from "lottie-react";
 import "./hero.css";
 import devAnimation from "../../animations/dev2.json";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const lottieRef = React.useRef();
@@ -9,7 +11,14 @@ const Hero = () => {
     <section className="hero flex">
       <div className="left-section">
         <div className="parent-avatar flex">
-          <img className="avatar" src="./me.png" alt="" />
+          <motion.img
+            initial={{ transform: "scale(0)" }}
+            animate={{ transform: "scale(1.1)" }}
+            transition={{ damping: 6, type: "spring", stiffness: 100 }}
+            className="avatar"
+            src="./me.png"
+            alt=""
+          />
         </div>
         <div className="flex">
           <h1 className="title">Ibrahim M.Fathi</h1>

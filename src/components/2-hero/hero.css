@@ -19,6 +19,7 @@ section.hero {
 section.hero .parent-avatar.flex {
   align-items: center;
   gap: 0.6rem;
+  min-height: 120px;
 }
 
 section.hero .left-section {

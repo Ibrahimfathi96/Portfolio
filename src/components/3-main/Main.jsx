@@ -1,5 +1,6 @@
 import React from "react";
 import "./main.css";
+import { AnimatePresence, motion } from "framer-motion";
 import { MyProjects } from "../../data/MyProjects";
 const Main = () => {
   const [currentActive, setCurrentActive] = React.useState("all");
@@ -63,28 +64,41 @@ const Main = () => {
       </section>
 
       <section className="right-section flex">
-        {projects.map((item) => {
-          return (
-            <article key={item.id.toString()} className="card">
-              <img width={266} src={item.imagePath} alt="" />
+        <AnimatePresence>
+          {projects.map((item) => {
+            return (
+              <motion.article
+                layout
+                initial={{ transform: "scale(0.4)" }}
+                animate={{ transform: "scale(1)" }}
+                transition={{
+                  damping: 8,
+                  type: "spring",
+                  stiffness: 50,
+                }}
+                key={item.id.toString()}
+                className="card"
+              >
+                <img width={266} src={item.imagePath} alt="" />
 
-              <div style={{ width: "266px" }} className="box">
-                <h1 className="title">{item.projectTitle}</h1>
-                <p className="sub-title">{item.projectDescription}</p>
-                <div className="flex all-icons">
-                  <div style={{ gap: "11px" }} className="flex">
-                    <div className="icon icon-google-drive"></div>
-                    <div className="icon icon-github"></div>
+                <div style={{ width: "266px" }} className="box">
+                  <h1 className="title">{item.projectTitle}</h1>
+                  <p className="sub-title">{item.projectDescription}</p>
+                  <div className="flex all-icons">
+                    <div style={{ gap: "11px" }} className="flex">
+                      <div className="icon icon-google-drive"></div>
+                      <div className="icon icon-github"></div>
+                    </div>
+                    <a className="link flex" href="">
+                      more
+                      <span className="icon-arrow-right"></span>
+                    </a>
                   </div>
-                  <a className="link flex" href="">
-                    more
-                    <span className="icon-arrow-right"></span>
-                  </a>
                 </div>
-              </div>
-            </article>
-          );
-        })}
+              </motion.article>
+            );
+          })}
+        </AnimatePresence>
       </section>
     </main>
   );

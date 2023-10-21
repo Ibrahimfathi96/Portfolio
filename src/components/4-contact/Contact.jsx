@@ -10,11 +10,10 @@ const Contact = () => {
       <section className="contact-us">
         <h1 className="title">
           <span className="icon-envelope"></span>
-          Contact Us
+          Contact Me
         </h1>
         <p className="sub-title">
-          Contact us for more information and Get notified when I publish
-          something new.
+          Contact me for more information and Get start working together.
         </p>
 
         <div className="flex">
@@ -23,6 +22,7 @@ const Contact = () => {
               <label htmlFor="email">Email Address:</label>
               <input
                 autoComplete="off"
+                placeholder="email address"
                 required
                 type="email"
                 name="email"
@@ -37,7 +37,12 @@ const Contact = () => {
 
             <div className="flex" style={{ marginTop: "1.1rem" }}>
               <label htmlFor="message">Your Message:</label>
-              <textarea required name="message" id="message" />
+              <textarea
+                required
+                name="message"
+                id="message"
+                placeholder="enter your message"
+              />
               <ValidationError
                 prefix="Message"
                 field="message"
@@ -71,11 +76,7 @@ const Contact = () => {
           </form>
 
           <div className="animation">
-            <Lottie
-              className="contact-animation"
-              loop={false}
-              animationData={contactUs}
-            />
+            <Lottie className="contact-animation" animationData={contactUs} />
           </div>
         </div>
       </section>
