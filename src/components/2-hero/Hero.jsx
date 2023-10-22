@@ -16,7 +16,7 @@ const Hero = () => {
             animate={{ transform: "scale(1.1)" }}
             transition={{ damping: 6, type: "spring", stiffness: 100 }}
             className="avatar"
-            src="../../../imgs/me.png"
+            src="https://res.cloudinary.com/doehu91ch/image/upload/v1698017850/Portofolio/kpuvugeqv7pz1dlhrqa8.png"
             alt=""
           />
         </div>
