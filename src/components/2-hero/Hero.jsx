@@ -16,7 +16,7 @@ const Hero = () => {
             animate={{ transform: "scale(1.1)" }}
             transition={{ damping: 6, type: "spring", stiffness: 100 }}
             className="avatar"
-            src="./me.png"
+            src="../../../imgs/me.png"
             alt=""
           />
         </div>
