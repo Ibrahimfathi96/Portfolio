@@ -16,7 +16,7 @@ export const MyProjects = [
     id: 2,
     projectTitle: "Microsoft To-do List",
     projectDescription:
-      "Microsoft To-do List Clone Application. it's DPE Graduation Project using React Native & Expo & Redux and Node Js & Express & MongoDB as backend ",
+      "Microsoft To-do List Clone Application. it's DPE Graduation Project using React Native & Expo & Redux and backend using Node Js & Express & MongoDB.",
     category: ["React Native", "Node Js", "JavaScript"],
     imagePath: "../../public/imgs/m-todo.png",
     github: "https://github.com/Ibrahimfathi96/DPE-MicrosoftTodoList",
