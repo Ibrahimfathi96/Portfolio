@@ -58,7 +58,17 @@ const Hero = () => {
           <div className="icon icon-node-dot-js"></div>
           <div className="icon icon-mongodb"></div>
         </div>
-        <button type="button" className="cv-btn">download CV</button>
+        <button
+          className="cv-btn"
+          onClick={() => {
+            window.open(
+              "https://drive.google.com/file/d/1quPTlE5wzmM44BFXCBjI-X5tB1L2iYDr/view?usp=sharing",
+              "_blank"
+            );
+          }}
+        >
+          Download CV
+        </button>
       </div>
 
       <div className="right-section animation">
