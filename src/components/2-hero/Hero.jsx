@@ -36,14 +36,61 @@ const Hero = () => {
           apps, making sure they continue to engage users and remain relevant
         </p>
         <div className="all-icons flex">
-          <div className="icon icon-x"></div>
-          <div className="icon icon-instagram1"></div>
-          <div className="icon icon-github"></div>
-          <div className="icon icon-linkedin1"></div>
-          <div className="icon icon-whatsapp1"></div>
-          <div className="icon icon-upwork"></div>
-          <div className="icon icon-microsoftoutlook"></div>
-          <div className="icon icon-gmail"></div>
+          <a
+            href="https://twitter.com/Ibrahim_Fathi96"
+            target="_blank"
+            rel="noreferrer"
+            className="icon icon-x"
+          />
+
+          <a
+            href="https://www.instagram.com/eng.ibrahim_fathi96/"
+            target="_blank"
+            rel="noreferrer"
+            className="icon icon-instagram1"
+          />
+
+          <a
+            href="https://github.com/Ibrahimfathi96"
+            target="_blank"
+            rel="noreferrer"
+            className="icon icon-github"
+          />
+
+          <a
+            href="https://www.linkedin.com/in/ibrahimfathi796/"
+            target="_blank"
+            rel="noreferrer"
+            className="icon icon-linkedin1"
+          />
+
+          <a
+            href="https://wa.me/+201555518756"
+            target="_blank"
+            rel="noreferrer"
+            className="icon icon-whatsapp1"
+          />
+
+          <a
+            href="https://www.upwork.com/freelancers/~01a97744f780dd0c12"
+            target="_blank"
+            rel="noreferrer"
+            className="icon icon-upwork"
+          />
+
+          <a
+            href="mailto:ibrahimfathi796@outlook.com"
+            target="_blank"
+            rel="noreferrer"
+            className="icon icon-microsoftoutlook"
+          />
+
+          <a
+            href="mailto:ibmf796@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className="icon icon-gmail"
+          />
         </div>
         <div className="all-techs flex">
           <div className="icon icon-dart"></div>
@@ -62,7 +109,7 @@ const Hero = () => {
           className="cv-btn"
           onClick={() => {
             window.open(
-              "https://drive.google.com/file/d/1quPTlE5wzmM44BFXCBjI-X5tB1L2iYDr/view?usp=sharing",
+              "https://drive.google.com/file/d/1ZzOzmXU7S6PIJ71-ponfQb1aVpBndBhm/view?usp=sharing",
               "_blank"
             );
           }}
