@@ -58,17 +58,33 @@ section.hero p.sub-title {
   color: var(--subtitle);
 }
 
+section.hero .all-techs,
 section.hero .all-icons {
-  font-size: 1.3rem;
+  font-size: 2rem;
   gap: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--subtitle);
 }
 
-section.hero .all-icons .icon:hover {
+section.hero .all-icons .icon:hover,
+section.hero .all-techs .icon:hover {
   font-size: 1.45rem;
   transition: 0.3s;
   cursor: pointer;
   color: var(--icon-hover);
+}
+
+.cv-btn {
+  background-color: rgba(36, 37, 46, 1);
+  border: 1px solid rgb(63, 63, 70);
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: capitalize;
+  border-radius: 6px;
+  transition: 0.3s;
+  margin-top: 1.5rem;
+  align-self: flex-end;
 }
 
 /* 
@@ -99,8 +115,9 @@ section.hero .all-icons .icon:hover {
     font-size: 1.5rem;
   }
 }
-@media (max-width: 600px) {
-  section.hero .all-icons {
+@media (max-width: 750px) {
+  section.hero .all-icons,
+  section.hero .all-techs {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;

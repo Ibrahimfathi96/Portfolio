@@ -45,7 +45,22 @@ const Hero = () => {
           <div className="icon icon-microsoftoutlook"></div>
           <div className="icon icon-gmail"></div>
         </div>
+        <div className="all-techs flex">
+          <div className="icon icon-dart"></div>
+          <div className="icon icon-flutter"></div>
+          <div className="icon icon-firebase"></div>
+          <div className="icon icon-html5"></div>
+          <div className="icon icon-css3"></div>
+          <div className="icon icon-javascript"></div>
+          <div className="icon icon-typescript"></div>
+          <div className="icon icon-react"></div>
+          <div className="icon icon-redux"></div>
+          <div className="icon icon-node-dot-js"></div>
+          <div className="icon icon-mongodb"></div>
+        </div>
+        <button type="button" className="cv-btn">download CV</button>
       </div>
+
       <div className="right-section animation">
         <Lottie
           lottieRef={lottieRef}

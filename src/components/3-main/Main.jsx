@@ -79,19 +79,29 @@ const Main = () => {
                 key={item.id.toString()}
                 className="card"
               >
-                <img width={266} src={item.imagePath} alt="" />
+                <img width={266} height={170} src={item.imagePath} alt="" />
 
                 <div style={{ width: "266px" }} className="box">
                   <h1 className="title">{item.projectTitle}</h1>
                   <p className="sub-title">{item.projectDescription}</p>
                   <div className="flex all-icons">
-                    <div style={{ gap: "11px" }} className="flex">
+                    <a
+                      href={item.googleDrive}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex google-drive"
+                    >
                       <div className="icon icon-google-drive"></div>
+                      <h5>Google Drive</h5>
+                    </a>
+                    <a
+                      className="flex github"
+                      href={item.github}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <div className="icon icon-github"></div>
-                    </div>
-                    <a className="link flex" href="">
-                      more
-                      <span className="icon-arrow-right"></span>
+                      <h5>GitHub</h5>
                     </a>
                   </div>
                 </div>
