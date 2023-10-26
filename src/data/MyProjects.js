@@ -111,7 +111,7 @@ export const MyProjects = [
     id: 10,
     projectTitle: "Coffee House",
     projectDescription:
-      "Coffee House is a Mobile Application Using React Native Cli & React Navigations and Lottie Animations & Zustand & Async Storage.",
+      "Coffee House is a Mobile Application Using React Native Cli & TypeScript & React Navigations and Lottie Animations & Zustand & Async Storage.",
     category: ["React Native", "JavaScript"],
     imagePath:
       "https://res.cloudinary.com/doehu91ch/image/upload/v1698346881/Portofolio/ywjlghbdk0r8iowragqs.jpg",
