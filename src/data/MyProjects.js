@@ -107,4 +107,16 @@ export const MyProjects = [
     googleDrive:
       "https://drive.google.com/drive/folders/1DR_PJUfEnq6fHFIWro_fJdNLWLR88GzW?usp=sharing",
   },
+  {
+    id: 10,
+    projectTitle: "Coffee House",
+    projectDescription:
+      "Coffee House is a Mobile Application Using React Native Cli & React Navigations and Lottie Animations & Zustand & Async Storage.",
+    category: ["React Native", "JavaScript"],
+    imagePath:
+      "https://res.cloudinary.com/doehu91ch/image/upload/v1698346881/Portofolio/ywjlghbdk0r8iowragqs.jpg",
+    github: "https://github.com/Ibrahimfathi96/CoffeeHouse",
+    googleDrive:
+      "https://drive.google.com/drive/folders/1YlCUt-PN5yFlBji_f8_kYP7umm6oAwUG?usp=sharing",
+  },
 ];
