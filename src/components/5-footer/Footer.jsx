@@ -6,12 +6,12 @@ const Footer = () => {
         <li>
           <a href="">About</a>
         </li>
-        <li>
+        {/* <li>
           <a href="">Skills</a>
         </li>
         <li>
           <a href="">Resume</a>
-        </li>
+        </li> */}
         <li>
           <a href="">Projects</a>
         </li>

@@ -24,6 +24,7 @@ section.hero .parent-avatar.flex {
 
 section.hero .left-section {
   flex-grow: 1;
+  flex: 3;
 }
 
 section.hero .avatar {
@@ -94,9 +95,9 @@ section.hero .all-techs .icon:hover {
 */
 
 .animation {
-  width: 100%;
+  flex: 2;
   margin-top: 7rem;
-  margin-right: -3rem;
+  margin-right: -5rem;
   transition: 100px 60px;
 }
 
@@ -105,7 +106,7 @@ section.hero .all-techs .icon:hover {
     3- Responsive Design (Media Query)
 =======================================
 */
-@media (max-width: 900px) {
+@media (max-width: 1250px) {
   .animation {
     display: none;
   }
