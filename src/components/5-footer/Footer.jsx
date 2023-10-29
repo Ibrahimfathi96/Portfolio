@@ -19,7 +19,10 @@ const Footer = () => {
           <a href="">Contact</a>
         </li>
       </ul>
-      <p>© 2023 Spencer Sharp. All rights reserved.</p>
+      <p>
+        Designed with Love ❤ <br />
+        by: Ibrahim Fathi 2024 &copy;
+      </p>
     </footer>
   );
 };
