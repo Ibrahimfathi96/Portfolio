@@ -6,7 +6,7 @@ import contactUs from "../../animations/contact-us.json";
 const Contact = () => {
   const [state, handleSubmit] = useForm("mvojlgaw");
   return (
-    <div>
+    <div id="contact">
       <section className="contact-us">
         <h1 className="title">
           <span className="icon-envelope"></span>

@@ -17,7 +17,7 @@ const Main = () => {
     }
   };
   return (
-    <main className="flex">
+    <main id="projects" className="flex">
       <section className="left-section flex">
         <button
           onClick={() => onClickHandler("all")}
