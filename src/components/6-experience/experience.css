@@ -362,6 +362,15 @@
     gap: 8px;
   }
 
+  .period {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
   .subsection-title {
     font-size: 1.6rem;
   }
@@ -389,6 +398,15 @@
     font-size: 1.2rem;
   }
 
+  .company {
+    font-size: 1rem;
+  }
+
+  .period {
+    font-size: 0.8rem;
+    padding: 3px 6px;
+  }
+
   .tech-tags,
   .project-tags {
     gap: 6px;
@@ -398,5 +416,18 @@
   .project-tag {
     font-size: 0.8rem;
     padding: 3px 8px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 50px;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-dot {
+    left: 15px;
   }
 }
