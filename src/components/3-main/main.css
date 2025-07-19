@@ -151,6 +151,94 @@ a.google-drive {
     3- Responsive Design (Media Query)
 =======================================
 */
+
+/* 
+=======================================
+    Project Type Badges
+=======================================
+*/
+.project-badge {
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-badge.professional {
+  background-color: var(--green);
+  color: var(--title);
+}
+
+.project-badge.educational {
+  background-color: var(--blue2);
+  color: var(--title);
+}
+
+/* Light theme overrides for project badges */
+.light .project-badge.professional {
+  color: white;
+}
+
+.light .project-badge.educational {
+  color: white;
+}
+
+/* Tech Stack Tags */
+.tech-stack-tags {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background: rgba(var(--blue-rgb), 0.1);
+  color: var(--blue);
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 1px solid rgba(var(--blue-rgb), 0.3);
+}
+
+/* Project Stats */
+.project-stats {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-icon {
+  font-size: 0.9rem;
+}
+
+.stat-text {
+  font-size: 0.75rem;
+  color: var(--sub-title-color);
+  font-weight: 500;
+}
+
+/* App Store and Play Store Links */
+.all-icons .app-store,
+.all-icons .play-store {
+  color: var(--blue2);
+}
+
+.all-icons .app-store:hover,
+.all-icons .play-store:hover {
+  color: var(--title);
+}
+
 @media (max-width: 600px) {
   main.flex {
     flex-direction: column;

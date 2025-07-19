@@ -3,8 +3,19 @@ import { ValidationError, useForm } from "@formspree/react";
 import Lottie from "lottie-react";
 import donesuccessfully from "../../animations/done.json";
 import contactUs from "../../animations/contact-us.json";
+import { useEffect, useRef } from "react";
 const Contact = () => {
   const [state, handleSubmit] = useForm("mvojlgaw");
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+
+  // Clear form inputs after successful submission
+  useEffect(() => {
+    if (state.succeeded) {
+      if (emailRef.current) emailRef.current.value = "";
+      if (messageRef.current) messageRef.current.value = "";
+    }
+  }, [state.succeeded]);
   return (
     <div id="contact">
       <section className="contact-us">
@@ -21,6 +32,7 @@ const Contact = () => {
             <div className="flex">
               <label htmlFor="email">Email Address:</label>
               <input
+                ref={emailRef}
                 autoComplete="off"
                 placeholder="email address"
                 required
@@ -38,6 +50,7 @@ const Contact = () => {
             <div className="flex" style={{ marginTop: "1.1rem" }}>
               <label htmlFor="message">Your Message:</label>
               <textarea
+                ref={messageRef}
                 required
                 name="message"
                 id="message"
