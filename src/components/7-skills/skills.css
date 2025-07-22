@@ -88,6 +88,7 @@
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 30px;
+  min-width: 0; /* Prevent overflow */
 }
 
 .category-title {
@@ -126,12 +127,18 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .skill-name {
   font-weight: 600;
   color: var(--title-color);
   font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
 }
 
 .skill-experience {
@@ -140,6 +147,7 @@
   background: rgba(var(--blue-rgb), 0.1);
   padding: 2px 8px;
   border-radius: 10px;
+  white-space: nowrap;
 }
 
 .skill-bar {
@@ -222,23 +230,42 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-matrix {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 18px;
+  }
+}
+
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
+    margin-bottom: 40px;
   }
 
   .skills {
     padding: 60px 0;
   }
 
+  .skills .container {
+    padding: 10px 15px;
+  }
+
   .skills-matrix {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
+    margin-bottom: 40px;
   }
 
   .achievements-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 15px;
+    margin-bottom: 40px;
   }
 
   .achievement-card {
@@ -249,8 +276,34 @@
     font-size: 2rem;
   }
 
+  .achievement-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .achievement-label {
+    font-size: 0.85rem;
+  }
+
   .skill-category {
     padding: 20px;
+  }
+
+  .category-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .skills-list {
+    gap: 18px;
+  }
+
+  .skill-name {
+    font-size: 0.95rem;
+  }
+
+  .skill-experience {
+    font-size: 0.75rem;
   }
 
   .cert-grid {
@@ -259,24 +312,136 @@
   }
 }
 
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .subsection-title {
-    font-size: 1.6rem;
-  }
-
+@media (max-width: 600px) {
   .achievements-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .achievement-card {
+    padding: 18px 12px;
   }
 
   .achievement-metric {
     font-size: 1.8rem;
   }
 
+  .achievement-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
   .achievement-label {
     font-size: 0.8rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .subsection-title {
+    font-size: 1.6rem;
+  }
+
+  .skills .container {
+    padding: 10px 12px;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .achievement-card {
+    padding: 20px 16px;
+    border-radius: 8px;
+  }
+
+  .achievement-metric {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .achievement-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .achievement-label {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .skill-category {
+    padding: 16px;
+  }
+
+  .category-title {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+
+  .skills-list {
+    gap: 15px;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+
+  .skill-experience {
+    font-size: 0.7rem;
+    padding: 1px 6px;
+  }
+
+  .skill-percentage {
+    font-size: 0.8rem;
+  }
+
+  .skill-bar {
+    height: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .achievements-grid {
+    gap: 12px;
+    max-width: 250px;
+  }
+
+  .achievement-card {
+    padding: 18px 14px;
+  }
+
+  .achievement-metric {
+    font-size: 1.6rem;
+  }
+
+  .achievement-icon {
+    font-size: 1.6rem;
+  }
+
+  .achievement-label {
+    font-size: 0.75rem;
+  }
+
+  .skill-category {
+    padding: 14px;
+  }
+
+  .category-title {
+    font-size: 1.1rem;
   }
 }
