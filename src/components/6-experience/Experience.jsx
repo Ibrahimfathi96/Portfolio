@@ -11,10 +11,11 @@ const Experience = () => {
       type: "Company",
       description: [
         "Sole developer for mobile apps, handling end-to-end React Native development",
-        "Built and maintained multiple e-commerce applications for clothing, shoes, and kids' fashion",
+        "Built and maintained multiple e-commerce applications (clothing, shoes, kids' fashion)",
         "Developed a social media app for horse enthusiasts, competitions, and community engagement",
-        "Integrated features like authentication, shopping cart, payments, and API integrations for seamless user experience",
+        "Integrated core features: authentication, shopping cart, payments, API integrations for seamless UX",
         "Deployed and maintained apps on both App Store & Google Play",
+        "Supervised other mobile developers (Flutter & React Native) alongside core development responsibilities",
       ],
       tech: [
         "React Native",
