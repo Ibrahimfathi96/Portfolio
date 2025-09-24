@@ -7,6 +7,7 @@ const Main = () => {
   const [projects, setProjects] = React.useState(
     MyProjects.filter((item) => item.projectType === "professional")
   );
+
   const onClickHandler = (category) => {
     setCurrentActive(category);
     if (category === "all") {
@@ -22,6 +23,20 @@ const Main = () => {
       });
       setProjects(newArr);
     }
+  };
+
+  // Function to check if title needs marquee
+  const checkTitleWidth = (title) => {
+    return title.length > 18;
+  };
+
+  const getStatusBadge = (item) => {
+    if (item.projectType === "educational") {
+      return { text: "EDU", class: "edu" };
+    }
+    return item.appStore || item.playStore
+      ? { text: "LIVE", class: "live" }
+      : { text: "DEV", class: "dev" };
   };
   return (
     <main id="projects" className="flex">
@@ -85,6 +100,9 @@ const Main = () => {
       <section className="right-section flex">
         <AnimatePresence>
           {projects.map((item) => {
+            const statusBadge = getStatusBadge(item);
+            const needsMarquee = checkTitleWidth(item.projectTitle);
+
             return (
               <motion.article
                 layout
@@ -98,24 +116,25 @@ const Main = () => {
                 key={item.id.toString()}
                 className="card"
               >
-                <img width={266} height={170} src={item.imagePath} alt="" />
+                <img src={item.imagePath} alt={item.projectTitle} />
 
-                <div style={{ width: "266px" }} className="box">
+                <div className="box">
                   <div
                     className="flex"
                     style={{
                       justifyContent: "space-between",
-                      alignItems: "center",
+                      alignItems: "flex-start",
                       marginBottom: "8px",
+                      gap: "10px",
                     }}
                   >
-                    <h1 className="title">{item.projectTitle}</h1>
-                    <span className={`project-badge ${item.projectType}`}>
-                      {item.projectType === "professional"
-                        ? item.appStore || item.playStore
-                          ? "LIVE"
-                          : "DEV"
-                        : "EDU"}
+                    <h1
+                      className={`title ${needsMarquee ? "title-marquee" : ""}`}
+                    >
+                      <span className="title-content">{item.projectTitle}</span>
+                    </h1>
+                    <span className={`status-badge ${statusBadge.class}`}>
+                      {statusBadge.text}
                     </span>
                   </div>
 
@@ -146,8 +165,9 @@ const Main = () => {
                     </div>
                   )}
 
-                  <div className="flex all-icons">
-                    {item.googleDrive && (
+                  {/* Dashboard Link - Separate Row */}
+                  {item.googleDrive && (
+                    <div className="flex dashboard-link">
                       <a
                         href={item.googleDrive}
                         target="_blank"
@@ -155,9 +175,13 @@ const Main = () => {
                         className="flex google-drive"
                       >
                         <div className="icon icon-google-drive"></div>
-                        <h5>Google Drive</h5>
+                        <span>Dashboard</span>
                       </a>
-                    )}
+                    </div>
+                  )}
+
+                  {/* Store Links Row */}
+                  <div className="flex all-icons">
                     {item.appStore && (
                       <a
                         href={item.appStore}
@@ -165,8 +189,8 @@ const Main = () => {
                         rel="noreferrer"
                         className="flex app-store"
                       >
-                        <div className="icon icon-apple"></div>
-                        <h5>App Store</h5>
+                        <span style={{ fontSize: "1.2rem" }}>🍎</span>
+                        <span>App Store</span>
                       </a>
                     )}
                     {item.playStore && (
@@ -176,8 +200,8 @@ const Main = () => {
                         rel="noreferrer"
                         className="flex play-store"
                       >
-                        <div className="icon icon-google-play"></div>
-                        <h5>Play Store</h5>
+                        <span style={{ fontSize: "1.2rem" }}>📱</span>
+                        <span>Google Play</span>
                       </a>
                     )}
                     {item.projectType !== "professional" && (
@@ -188,7 +212,7 @@ const Main = () => {
                         rel="noreferrer"
                       >
                         <div className="icon icon-github"></div>
-                        <h5>GitHub</h5>
+                        <span>GitHub</span>
                       </a>
                     )}
                   </div>

@@ -43,6 +43,36 @@ export const MyProjects = [
     playStore: "",
   },
   {
+    id: 12,
+    projectTitle: "Rakd | ركض",
+    projectDescription:
+      "Comprehensive car wash service app with client/worker functionality. Users can book car wash services anytime, track providers in real-time, compare prices and ratings. Features service tracking, secure payments, loyalty rewards, and admin dashboard for team management.",
+    category: ["React Native", "JS / TS"],
+    projectType: "professional",
+    imagePath:
+      "https://res.cloudinary.com/doehu91ch/image/upload/v1758745508/rxoobfdu1yz4h9luemfn.png",
+    github: "",
+    appStore:
+      "https://apps.apple.com/us/app/rakd-%D8%B1%D9%83%D8%B6/id6751469641",
+    playStore: "https://play.google.com/store/apps/details?id=com.rakd",
+    googleDrive:
+      "https://drive.google.com/file/d/1QNFirOFpOVM20D9qAvK9EfXpOUkGtxxU/view?usp=drive_link",
+  },
+  {
+    id: 27,
+    projectTitle: "AlAmthal | الأمثل",
+    projectDescription:
+      "Fast shopping application for quality electronics supplies and technical accessories at competitive prices. Features organized sections for personal care, mobile/laptop accessories, networking, IoT devices, and small home appliances with quick Google/Apple registration.",
+    category: ["React Native", "JS / TS"],
+    projectType: "professional",
+    imagePath:
+      "https://res.cloudinary.com/doehu91ch/image/upload/v1758748269/aesrzkxyacsggprbxdip.jpg",
+    github: "",
+    appStore:
+      "https://apps.apple.com/us/app/al-amthal-%D8%A7%D9%84%D8%A3%D9%85%D8%AB%D9%84/id6751743241",
+    playStore: "https://play.google.com/store/apps/details?id=com.Alamthal.app",
+  },
+  {
     id: 6,
     projectTitle: "Gayar - غيار",
     projectDescription:
