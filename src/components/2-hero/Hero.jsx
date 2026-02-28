@@ -73,16 +73,14 @@ const Hero = () => {
           Software Engineer | Mobile App Developer
         </h2>
         <p className="sub-title">
-          Innovative Mobile App Developer specializing in cross-platform
-          solutions with React Native & Flutter. Proven track record of
-          delivering 14+ production applications with exceptional user
-          experiences and robust architectures. Expert in crafting scalable
-          mobile solutions, implementing complex state management, and
-          integrating cloud services. Proficient across the entire development
-          stack - from pixel-perfect UI components to backend infrastructure
-          (Firebase/Supabase). Passionate about clean code, performance
-          optimization, and transforming ideas into market-ready mobile
-          applications.
+          Versatile Mobile App Developer with a strong track record of building
+          high-quality, cross-platform applications using React Native &
+          Flutter. Proven ability to deliver results both independently and as a
+          key member of collaborative teams. Adept at crafting custom UI
+          components, integrating diverse APIs, and managing complex application
+          state. Proficient in Dart, JavaScript/TypeScript, and backend
+          technologies (Firebase / Supabase), enabling the delivery of
+          comprehensive full-stack solutions for scalable mobile projects.
         </p>
         <div className="all-icons flex">
           <a
