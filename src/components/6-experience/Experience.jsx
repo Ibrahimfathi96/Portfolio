@@ -32,6 +32,8 @@ const Experience = () => {
         "ElGarawi-Kids",
         "ShoePalace",
         "Jeyad",
+        "Neyaq",
+        "Qarnas",
         "Matloub",
         "AlAmthal",
         "Pizza & Pizza Delivery",

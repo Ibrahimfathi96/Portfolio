@@ -29,6 +29,34 @@ export const MyProjects = [
     playStore: "https://play.google.com/store/apps/details?id=com.jeyad",
   },
   {
+    id: 50,
+    projectTitle: "Neyaq | نياق",
+    projectDescription:
+      "Social media platform for camel owners, competitions, and events. Same concept as Jeyad but tailored for the camel community. Built with React Native featuring real-time chat, AI Chatbot, event management, auctions, and community features. V1 released on Android, Apple Store coming soon.",
+    category: ["React Native", "JS / TS"],
+    projectType: "professional",
+    imagePath:
+      "https://res.cloudinary.com/doehu91ch/image/upload/v1772320075/f87cjqu8hxwxosfens61.png",
+    github: "",
+    appStore:
+      "https://apps.apple.com/us/app/neyaq-%D9%86%D9%8A%D8%A7%D9%82/id6758336566",
+    playStore: "https://play.google.com/store/apps/details?id=com.niyak",
+  },
+  {
+    id: 51,
+    projectTitle: "Qarnas | قرناس",
+    projectDescription:
+      "Social media platform for falcon owners, competitions, and events. Same concept as Jeyad but dedicated to the falconry community. Built with React Native featuring real-time chat, AI Chatbot, event management, auctions, and community features.",
+    category: ["React Native", "JS / TS"],
+    projectType: "professional",
+    imagePath:
+      "https://res.cloudinary.com/doehu91ch/image/upload/v1772320075/p6usnynz83t4a9nbzdxa.png",
+    github: "",
+    appStore:
+      "https://apps.apple.com/us/app/qarnas-%D9%82%D8%B1%D9%86%D8%A7%D8%B3/id6757862035",
+    playStore: "https://play.google.com/store/apps/details?id=com.qarnas",
+  },
+  {
     id: 11,
     projectTitle: "Halalah - هلله",
     projectDescription:

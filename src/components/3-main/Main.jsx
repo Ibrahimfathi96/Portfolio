@@ -5,8 +5,9 @@ import { MyProjects } from "../../data/MyProjects";
 const Main = () => {
   const [currentActive, setCurrentActive] = React.useState("professional");
   const [projects, setProjects] = React.useState(
-    MyProjects.filter((item) => item.projectType === "professional")
+    MyProjects.filter((item) => item.projectType === "professional"),
   );
+  const [expandedId, setExpandedId] = React.useState(null);
 
   const onClickHandler = (category) => {
     setCurrentActive(category);
@@ -23,11 +24,6 @@ const Main = () => {
       });
       setProjects(newArr);
     }
-  };
-
-  // Function to check if title needs marquee
-  const checkTitleWidth = (title) => {
-    return title.length > 18;
   };
 
   const getStatusBadge = (item) => {
@@ -101,7 +97,6 @@ const Main = () => {
         <AnimatePresence>
           {projects.map((item) => {
             const statusBadge = getStatusBadge(item);
-            const needsMarquee = checkTitleWidth(item.projectTitle);
 
             return (
               <motion.article
@@ -116,71 +111,35 @@ const Main = () => {
                 key={item.id.toString()}
                 className="card"
               >
-                <img src={item.imagePath} alt={item.projectTitle} />
+                <div className="card-img-wrapper">
+                  <img src={item.imagePath} alt={item.projectTitle} />
+                  <span className={`status-badge ${statusBadge.class}`}>
+                    {statusBadge.text}
+                  </span>
+                </div>
 
                 <div className="box">
-                  <div
-                    className="flex"
-                    style={{
-                      justifyContent: "space-between",
-                      alignItems: "flex-start",
-                      marginBottom: "8px",
-                      gap: "10px",
-                    }}
-                  >
-                    <h1
-                      className={`title ${needsMarquee ? "title-marquee" : ""}`}
-                    >
-                      <span className="title-content">{item.projectTitle}</span>
-                    </h1>
-                    <span className={`status-badge ${statusBadge.class}`}>
-                      {statusBadge.text}
-                    </span>
-                  </div>
+                  <h1 className="title">{item.projectTitle}</h1>
 
-                  {/* Tech Stack Tags */}
                   <div className="tech-stack-tags">
-                    {item.category.slice(0, 2).map((tech, index) => (
+                    {item.category.slice(0, 3).map((tech, index) => (
                       <span key={index} className="tech-tag">
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  <p className="sub-title">{item.projectDescription}</p>
+                  <p
+                    className={`sub-title ${expandedId === item.id ? "expanded" : ""}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedId(expandedId === item.id ? null : item.id);
+                    }}
+                    title="Click to read more"
+                  >
+                    {item.projectDescription}
+                  </p>
 
-                  {/* Project Stats - Only show for apps with store links */}
-                  {(item.appStore || item.playStore) && (
-                    <div className="project-stats">
-                      <span className="stat">
-                        <span className="stat-icon">📱</span>
-                        <span className="stat-text">Mobile App</span>
-                      </span>
-                      {item.projectType === "professional" && (
-                        <span className="stat">
-                          <span className="stat-icon">⭐</span>
-                          <span className="stat-text">4.5+ Rating</span>
-                        </span>
-                      )}
-                    </div>
-                  )}
-
-                  {/* Dashboard Link - Separate Row */}
-                  {item.googleDrive && (
-                    <div className="flex dashboard-link">
-                      <a
-                        href={item.googleDrive}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex google-drive"
-                      >
-                        <div className="icon icon-google-drive"></div>
-                        <span>Dashboard</span>
-                      </a>
-                    </div>
-                  )}
-
-                  {/* Store Links Row */}
                   <div className="flex all-icons">
                     {item.appStore && (
                       <a
@@ -189,7 +148,7 @@ const Main = () => {
                         rel="noreferrer"
                         className="flex app-store"
                       >
-                        <span style={{ fontSize: "1.2rem" }}>🍎</span>
+                        <span className="store-icon">🍎</span>
                         <span>App Store</span>
                       </a>
                     )}
@@ -200,11 +159,22 @@ const Main = () => {
                         rel="noreferrer"
                         className="flex play-store"
                       >
-                        <span style={{ fontSize: "1.2rem" }}>📱</span>
-                        <span>Google Play</span>
+                        <span className="store-icon">▶️</span>
+                        <span>Play Store</span>
                       </a>
                     )}
-                    {item.projectType !== "professional" && (
+                    {item.googleDrive && (
+                      <a
+                        href={item.googleDrive}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex google-drive"
+                      >
+                        <div className="icon icon-google-drive"></div>
+                        <span>Dashboard</span>
+                      </a>
+                    )}
+                    {item.projectType !== "professional" && item.github && (
                       <a
                         className="flex github"
                         href={item.github}

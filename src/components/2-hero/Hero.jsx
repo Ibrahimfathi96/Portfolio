@@ -12,9 +12,9 @@ const Hero = () => {
 
   // Optimized image URLs with Cloudinary transformations
   const avatarUrlWebP =
-    "https://res.cloudinary.com/doehu91ch/image/upload/c_fill,w_300,h_300,q_auto,f_webp/v1698017850/Portofolio/kpuvugeqv7pz1dlhrqa8.png";
+    "https://res.cloudinary.com/doehu91ch/image/upload/c_fill,w_300,h_300,q_auto,f_webp/v1772320107/mxzzbz3opdmkkv75brlj.png";
   const avatarUrlFallback =
-    "https://res.cloudinary.com/doehu91ch/image/upload/c_fill,w_300,h_300,q_auto,f_auto/v1698017850/Portofolio/kpuvugeqv7pz1dlhrqa8.png";
+    "https://res.cloudinary.com/doehu91ch/image/upload/c_fill,w_300,h_300,q_auto,f_auto/v1772320107/mxzzbz3opdmkkv75brlj.png";
 
   React.useEffect(() => {
     const img = new Image();
@@ -159,7 +159,7 @@ const Hero = () => {
           onClick={() => {
             window.open(
               "https://drive.google.com/file/d/1ZzOzmXU7S6PIJ71-ponfQb1aVpBndBhm/view?usp=sharing",
-              "_blank"
+              "_blank",
             );
           }}
         >
