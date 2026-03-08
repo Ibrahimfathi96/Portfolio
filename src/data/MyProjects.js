@@ -71,6 +71,21 @@ export const MyProjects = [
     playStore: "",
   },
   {
+    id: 52,
+    projectTitle: "Matlob | مطلوب",
+    projectDescription:
+      "Classifieds app to post and browse requests for products or services, with in-app chat, favorites, categories, bilingual Arabic/English support, and push notifications.",
+    category: ["Flutter"],
+    projectType: "professional",
+    imagePath:
+      "https://res.cloudinary.com/doehu91ch/image/upload/v1772979224/sf0rslxbcdvrkkqknegh.png",
+    github: "",
+    appStore:
+      "https://apps.apple.com/us/app/matloub-%D9%85%D8%B7%D9%84%D9%88%D8%A8/id6755442648",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.matloub.applaitech",
+  },
+  {
     id: 12,
     projectTitle: "Rakd | ركض",
     projectDescription:
@@ -178,6 +193,7 @@ export const MyProjects = [
       "https://res.cloudinary.com/doehu91ch/image/upload/v1752934748/ebuhl9jt90rf0icmowi2.png",
     github: "",
     googleDrive: "",
+    hidden: true,
   },
   {
     id: 9,
@@ -190,6 +206,7 @@ export const MyProjects = [
       "https://res.cloudinary.com/doehu91ch/image/upload/v1752934853/mxmx4xmkrzxaqgxma2we.png",
     github: "",
     googleDrive: "",
+    hidden: true,
   },
   {
     id: 10,
@@ -202,6 +219,7 @@ export const MyProjects = [
       "https://res.cloudinary.com/doehu91ch/image/upload/v1752934999/egrd9ac4vgzpknofpf87.png",
     github: "",
     googleDrive: "",
+    hidden: true,
   },
   {
     id: 12,
@@ -214,6 +232,7 @@ export const MyProjects = [
       "https://res.cloudinary.com/doehu91ch/image/upload/v1752935076/efdfd2fa2xxaaedjwkss.png",
     github: "",
     googleDrive: "",
+    hidden: true,
   },
   {
     id: 13,
@@ -226,6 +245,7 @@ export const MyProjects = [
       "https://res.cloudinary.com/doehu91ch/image/upload/v1752935150/rhfgytovhj89aamob52r.png",
     github: "",
     googleDrive: "",
+    hidden: true,
   },
   {
     id: 14,
@@ -238,6 +258,7 @@ export const MyProjects = [
       "https://res.cloudinary.com/doehu91ch/image/upload/v1752935212/z1z3t0yxy4n5dnltj44l.png",
     github: "",
     googleDrive: "",
+    hidden: true,
   },
   {
     id: 21,

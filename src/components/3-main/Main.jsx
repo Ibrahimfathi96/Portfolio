@@ -5,22 +5,24 @@ import { MyProjects } from "../../data/MyProjects";
 const Main = () => {
   const [currentActive, setCurrentActive] = React.useState("professional");
   const [projects, setProjects] = React.useState(
-    MyProjects.filter((item) => item.projectType === "professional"),
+    MyProjects.filter(
+      (item) => item.projectType === "professional" && !item.hidden,
+    ),
   );
   const [expandedId, setExpandedId] = React.useState(null);
 
   const onClickHandler = (category) => {
     setCurrentActive(category);
     if (category === "all") {
-      setProjects(MyProjects);
+      setProjects(MyProjects.filter((item) => !item.hidden));
     } else if (category === "professional" || category === "educational") {
       const newArr = MyProjects.filter((item) => {
-        return item.projectType === category;
+        return item.projectType === category && !item.hidden;
       });
       setProjects(newArr);
     } else {
       const newArr = MyProjects.filter((item) => {
-        return item.category.includes(category);
+        return item.category.includes(category) && !item.hidden;
       });
       setProjects(newArr);
     }
