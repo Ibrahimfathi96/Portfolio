@@ -1,0 +1,291 @@
+%-------------------------
+% Resume in Latex
+% Author : Ibrahim M.Fathi
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underline
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey} \small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Ibrahim M.Fathi} \\ \vspace{5pt}
+    \small \faPhone* \texttt{+20.155.551.8756} \hspace{1pt} $|$
+    \hspace{1pt} \faLinkedin \hspace{2pt} \texttt{\href{https://www.linkedin.com/in/ibrahimfathi796/}{\myuline{linkedin.com/in/ibrahimfathi796}}} \hspace{1pt} $|$
+    \hspace{1pt} \faGithub \hspace{2pt} \texttt{\href{https://github.com/Ibrahimfathi96}{\myuline{github.com/Ibrahimfathi96}}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Egypt}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{SUMMARY}
+\small{Versatile Mobile App Developer with a strong track record of building high-quality, cross-platform applications using \textbf{React Native \& Flutter}. Proven ability to deliver results both independently and as a key member of collaborative teams. Adept at crafting custom UI components, integrating diverse APIs, and managing complex application state. Proficient in Dart, JavaScript/TypeScript, and backend technologies (Firebase / Supabase), enabling the delivery of \textbf{14+ live apps} on App Store \& Google Play.}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Softoio LLC}{May 2024 -- Present}
+      {React Native Developer (Full-time)}{Remote}
+      \resumeItemListStart
+        \resumeItem{\textbf{Sole developer} for mobile apps, handling end-to-end React Native development}
+        \resumeItem{Built and maintained \textbf{multiple e-commerce applications} (clothing, shoes, kids' fashion)}
+        \resumeItem{Developed a \textbf{social media app} for horse/camel/falcon enthusiasts, competitions, and community engagement}
+        \resumeItem{Integrated core features: authentication, shopping cart, payments, and API integrations for seamless UX}
+        \resumeItem{\textbf{Deployed and maintained apps} on both App Store \& Google Play}
+        \resumeItem{\textbf{Supervised} Flutter \& React Native developers; oversaw Dynamo Car -- coupon app for car maintenance in Riyadh}
+        \resumeItem{\textbf{Key Apps}: Riya, Jeyad, Neyaq, Qarnas, AlAmthal, Matlob, Pizza \& Pizza Delivery}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Contract -- Senior React Native Developer}{Apr. 2024 -- Feb. 2025}
+      {React Native Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Worked closely with a Senior React Native Developer on \textbf{4+ cross-platform apps}}
+        \resumeItem{Handled UI features, bug fixes, and feature implementation based on user feedback}
+        \resumeItem{Developed live applications including \textbf{e-commerce and real estate} platforms}
+        \resumeItem{Contributed to invoice generation, purchase/sales tracking, and compliance features for the \textbf{Saudi market}}
+        \resumeItem{Built interactive coupon display \& redemption features and water delivery platforms}
+        \resumeItem{\textbf{Key Apps}: Gayar, NICHE, Vom Accounting Software, Win Coupons App, AquaHana}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Freelance Projects}{Aug. 2023 -- Present}
+      {Mobile App Developer (Freelance)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Developed \textbf{Flutter application} for winning coupons for famous brands (Halalah -- live on App Store)}
+        \resumeItem{Built Parental Networking App with user registration, profile creation, and \textbf{real-time chat}}
+        \resumeItem{Created \textbf{Full Stack E-commerce Application} for Palestinian local brands (PAL-IN Store)}
+        \resumeItem{Collaborated on Flutter mobile application for Iraqi Fiqh Academy facilitating Islamic fatwas (Fatwalraq)}
+        \resumeItem{Developed Rakd -- comprehensive \textbf{car wash service platform} with client, worker, and admin apps}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Nile University}{Nov. 2023 -- Feb. 2024}
+      {React Native Developer Intern}{Cairo, Egypt}
+      \resumeItemListStart
+        \resumeItem{Developed two React Native apps with \textbf{custom UI components} from scratch}
+        \resumeItem{Worked with asynchronous operations, state management, and navigation systems}
+        \resumeItem{Contributed to \textbf{code reviews} and collaborated with a professional development team}
+        \resumeItem{Gained hands-on experience with professional development workflows and best practices}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Riya Shop KSA} $|$ \emph{React Native, TypeScript}}{\href{https://apps.apple.com/eg/app/riya-shop-ksa/id6737839477}{\myuline{App Store}} \& \href{https://play.google.com/store/apps/details?id=com.online.applaiteknoloji.riya}{\myuline{Play}} -- 2024}
+          \resumeItemListStart
+            \resumeItem{\textbf{Multi-brand clothing e-commerce} with product catalog, cart, auth, and payment integration}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Jeyad} $|$ \emph{React Native, TypeScript, Firebase}}{\href{https://apps.apple.com/us/app/jeyad/id6743980348}{\myuline{App Store}} \& \href{https://play.google.com/store/apps/details?id=com.jeyad}{\myuline{Play}} -- 2024}
+          \resumeItemListStart
+            \resumeItem{Social platform for \textbf{horse owners} with real-time chat, AI Chatbot, events, and auctions; same concept extended to \textbf{Neyaq} (camels) \& \textbf{Qarnas} (falcons)}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Rakd} $|$ \emph{React Native, TypeScript, Firebase}}{\href{https://apps.apple.com/us/app/id6751469641}{\myuline{App Store}} \& \href{https://play.google.com/store/apps/details?id=com.rakd}{\myuline{Play}} -- 2024}
+          \resumeItemListStart
+            \resumeItem{\textbf{Car wash booking app} with client/worker roles, real-time tracking, payments, loyalty rewards, and admin dashboard}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{AlAmthal} $|$ \emph{React Native, TypeScript}}{\href{https://apps.apple.com/us/app/id6751743241}{\myuline{App Store}} \& \href{https://play.google.com/store/apps/details?id=com.Alamthal.app}{\myuline{Play}} -- 2024}
+          \resumeItemListStart
+            \resumeItem{\textbf{Electronics \& tech accessories} store covering mobile, networking, IoT, and home appliances}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Matlob} $|$ \emph{Flutter, Dart}}{\href{https://apps.apple.com/us/app/id6755442648}{\myuline{App Store}} \& \href{https://play.google.com/store/apps/details?id=com.matloub.applaitech}{\myuline{Play}} -- 2024}
+          \resumeItemListStart
+            \resumeItem{\textbf{Bilingual classifieds app} for product/service requests with in-app chat, categories, and push notifications}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Niche -- Real Estate} $|$ \emph{React Native, TypeScript}}{\href{https://apps.apple.com/eg/app/niche-real-estate/id6743856405}{\myuline{App Store}} \& \href{https://play.google.com/store/apps/details?id=com.nichegy.niche}{\myuline{Play}} -- 2024}
+          \resumeItemListStart
+            \resumeItem{Real estate platform with \textbf{advanced search filters} and virtual tours}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Dynamo Car} $|$ \emph{React Native, TypeScript}}{\href{https://apps.apple.com/us/app/id6755240880}{\myuline{App Store}} \& \href{https://play.google.com/store/apps/details?id=com.Dynamo.app}{\myuline{Play}} -- 2025}
+          \resumeItemListStart
+            \resumeItem{\textbf{Discount coupon app} for car maintenance in Riyadh; covers mechanical, electrical, tire, and oil services}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Gayar} $|$ \emph{React Native, TypeScript}}{\href{https://apps.apple.com/us/app/id6478932610}{\myuline{App Store}} \& \href{https://play.google.com/store/apps/details?id=com.gayar}{\myuline{Play}} -- 2024}
+          \resumeItemListStart
+            \resumeItem{\textbf{Automotive spare parts} e-commerce with compatibility checker and dealer network integration}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Halalah} $|$ \emph{Flutter, Dart, Firebase}}{\href{https://apps.apple.com/us/app/id6670790819}{\myuline{App Store}} -- 2024}
+          \resumeItemListStart
+            \resumeItem{Flutter \textbf{coupon app} for famous brands with limited-time discount offers}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION \& CERTIFICATIONS-----------
+\section{EDUCATION \& CERTIFICATIONS}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Nile University -- DPE Program}{2023}
+      {React Native Specialist Certification}{Cairo, Egypt}
+      \resumeItemListStart
+        \resumeItem{\textbf{Training}: React Native development, custom UI components, navigation, state management, code reviews}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Google Developer Student Clubs}{2023}
+      {Flutter Developer Certification}{}
+      \resumeItemListStart
+        \resumeItem{\textbf{Training}: Flutter \& Dart, cross-platform development, Firebase integration, UI/UX best practices}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Mobile Development} {: React Native, Flutter, TypeScript, JavaScript, Dart}\vspace{2pt} \\
+     \textbf{Backend \& APIs}    {: Node.js, Express.js, Firebase, Supabase, REST APIs}\vspace{2pt} \\
+     \textbf{Tools \& Platforms} {: Git \& GitHub, Postman, Figma, App Store Connect, Google Play Console, VS Code}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

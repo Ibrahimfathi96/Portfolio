@@ -116,6 +116,20 @@ export const MyProjects = [
     playStore: "https://play.google.com/store/apps/details?id=com.Alamthal.app",
   },
   {
+    id: 53,
+    projectTitle: "Dynamo Car",
+    projectDescription:
+      "Smart app that gives users exclusive discount coupons for car maintenance services in Riyadh. Connect with trusted workshops and enjoy special offers on mechanical, electrical, tire, and oil change services — all in one easy-to-use app.",
+    category: ["React Native", "JS / TS"],
+    projectType: "professional",
+    imagePath:
+      "https://res.cloudinary.com/doehu91ch/image/upload/v1773843494/u4nawx9p5vtbnjlrlvos.jpg",
+    github: "",
+    appStore:
+      "https://apps.apple.com/us/app/dynamo-car-%D8%AF%D9%8A%D9%86%D9%85%D9%88-%D9%83%D8%A7%D8%B1/id6755240880",
+    playStore: "https://play.google.com/store/apps/details?id=com.Dynamo.app",
+  },
+  {
     id: 6,
     projectTitle: "Gayar - غيار",
     projectDescription:
