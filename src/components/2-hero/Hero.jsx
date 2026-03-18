@@ -158,7 +158,8 @@ const Hero = () => {
           className="cv-btn"
           onClick={() => {
             window.open(
-              "https://drive.google.com/file/d/1ZzOzmXU7S6PIJ71-ponfQb1aVpBndBhm/view?usp=sharing",
+              // "https://drive.google.com/file/d/1ZzOzmXU7S6PIJ71-ponfQb1aVpBndBhm/view?usp=sharing",
+              "https://drive.google.com/file/d/1zJxpMHuI8IA6QUo3so3PbxNtC6mzgtod/view?usp=sharing",
               "_blank",
             );
           }}
