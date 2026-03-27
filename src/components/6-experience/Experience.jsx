@@ -34,6 +34,7 @@ const Experience = () => {
         "AlAmthal",
         "Matlob",
         "Pizza & Pizza Delivery",
+        "Dynamo Car",
       ],
     },
     {
